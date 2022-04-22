@@ -4,7 +4,7 @@ import com.acme.coreBanking.utils.ConfigurationReader;
 import com.acme.coreBanking.utils.Driver;
 import org.openqa.selenium.WebDriver;
 
-public class practice1 {
+public class Practice1 {
 
     public static void main(String[] args) {
         WebDriver driver = Driver.get();
