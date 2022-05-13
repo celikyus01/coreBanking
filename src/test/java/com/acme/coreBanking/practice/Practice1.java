@@ -12,7 +12,7 @@ public class Practice1 {
 
     @Before
     public void setupDriver(){
-        driver=Driver.get();
+        driver=Driver.getDriver();
     }
 
     @After

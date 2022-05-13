@@ -21,7 +21,7 @@ public class WebTables {
 
     @Before
     public void setUp() {
-        driver = Driver.get();
+        driver = Driver.getDriver();
         driver.manage().window().maximize();
     }
 

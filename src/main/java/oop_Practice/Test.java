@@ -1,4 +1,4 @@
-package com.acme.oop_Practice;
+package oop_Practice;
 
 public class Test {
     public static void main(String[] args) {

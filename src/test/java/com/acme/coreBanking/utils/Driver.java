@@ -17,7 +17,7 @@ public class Driver {
 
     private static WebDriver driver;
 
-    public static WebDriver get() {
+    public static WebDriver getDriver() {
         // Test
         if (driver == null) {
             // this line will tell which browser should open based on the value from properties file
