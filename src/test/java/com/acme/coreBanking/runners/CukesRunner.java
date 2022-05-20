@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-       features = "src/test/resources/features",
+        features = "src/test/resources/features",
         glue = "com/acme/coreBanking/stepDefinitions",
-        dryRun = false,
+        dryRun = true,
         tags = "@herhangibisey"
 )
 public class CukesRunner {

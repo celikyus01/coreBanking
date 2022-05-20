@@ -1,6 +1,7 @@
 package com.acme.coreBanking.pages;
 
 import com.acme.coreBanking.utils.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 public class WelcomePage {
@@ -9,6 +10,10 @@ public class WelcomePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
+    public void navigate(String menuName){
+//        String navigationMenu= String.format("//h5[.='%s']", menuName);
+        String navigationMenu= "//h5[.='"+menuName+"']";
+        Driver.getDriver().findElement(By.xpath(navigationMenu)).click();
+    }
 
 }
