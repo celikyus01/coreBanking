@@ -11,6 +11,6 @@ public class PracticeForms extends BasePage{
     @FindBy(id = "lastName")
     public WebElement lastNameInputBox;
 
-
-
+    @FindBy(id = "submit")
+    public WebElement submitButton;
 }

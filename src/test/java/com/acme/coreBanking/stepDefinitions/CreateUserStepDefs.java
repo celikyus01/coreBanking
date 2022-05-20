@@ -2,6 +2,7 @@ package com.acme.coreBanking.stepDefinitions;
 
 import com.acme.coreBanking.pages.PracticeForms;
 import com.acme.coreBanking.pages.WelcomePage;
+import com.acme.coreBanking.utils.BrowserUtils;
 import com.acme.coreBanking.utils.ConfigurationReader;
 import com.acme.coreBanking.utils.Driver;
 import io.cucumber.java.en.And;
@@ -52,11 +53,26 @@ public class CreateUserStepDefs {
 
     @And("I put lastName as {string}")
     public void iPutLastNameAs(String lastName) {
-        practiceForms.firstNameInputBox.sendKeys(lastName);
+        practiceForms.lastNameInputBox.sendKeys(lastName);
     }
 
     @When("I navigate to {string} page")
     public void iNavigateToPage(String menuName) {
         new WelcomePage().navigate(menuName);
+    }
+
+    @And("I click on {string}")
+    public void iClickOn(String text) {
+        BrowserUtils.clickByText(text);
+    }
+
+    @And("Click on submit button")
+    public void clickOnSubmitButton() {
+        BrowserUtils.click(practiceForms.submitButton);
+    }
+
+    @Then("Verify firstname border color is green")
+    public void verifyFirstnameBorderColorIsGreen() {
+        Assert.assertEquals("rgb(189, 207, 203)",practiceForms.firstNameInputBox.getCssValue("border-color"));
     }
 }

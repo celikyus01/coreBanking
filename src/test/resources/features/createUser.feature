@@ -4,11 +4,13 @@ Feature: Create User
   Scenario: Create User with valid data
     Given I am on the login screen
     Then Verify title as "ToolsQA"
-    When I navigate to create user page
     When I navigate to "Forms" page
     Then I verify the page header as "Practice Form"
+    And I click on "Practice Form"
     When I put firstname as "Seckin"
     And I put lastName as "Gulmus"
+    And Click on submit button
+  Then Verify firstname border color is green
 
 
 
